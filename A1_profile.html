@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<title>Update Profile</title>
+<button class="back-button" onclick=location.href="A1_homepage.html";>Back</button>
+<style>
+.back-button {
+    background-color:#EC8094;
+	color:white;
+	padding: 12px 18px;
+	border:none;
+	border-radius:6px;
+	margin:8px;
+	cursor:pointer;
+	display:inline-block;
+}
+
+.back-button:hover{
+  opacity:0.8;
+}
+
+img {
+    display:block;
+	margin-top:100px;
+	margin-left:auto;
+    margin-right:auto;
+	width:300px;
+	height:250px;
+}
+h2 {
+    text-align:center;
+}
+h4{
+display:inline;
+}
+p {
+ display:inline;
+ text-align:center;
+}
+
+.updateprofile {
+    border:solid 1px #777;
+    border-radius: 5px;
+	padding:70px;
+	width:50%;
+	margin-left:21%;;
+    text-align:center;
+	margin-bottom:50px;
+	text-align:justify;
+    font-size:20px;
+	letter-spacing:5px;
+	line-height:1.7;
+}
+
+.button{
+text-align:center;
+margin-bottom:20%;
+
+}
+
+ button {
+    background-color: #EC8094;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+		}
+		
+ button:hover {
+    opacity: 0.8;
+	
+}
+footer {
+  padding:20px;
+  text-align: left;
+  position:relative;
+  left:0;
+  bottom:0;
+  width:100%;
+  background-color: pink;
+  color: white;
+  padding-bottom:16px;
+}
+
+.mixuelogo{
+  width:80px;
+  height:80px;
+  position:absolute;
+  bottom:0;
+  right:40px;
+}
+</style>
+</head>
+<body style="margin:0;">
+<img src="user-profile.jpg" alt="userprofile">
+<h2>Update Profile</h2><br>
+<div class="updateprofile">
+
+  
+	<h4>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4><p id="name">___</p><br>
+	<h4>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</h4><p id="password">___</p><br>
+	
+ 
+</div>
+<div class="button">
+    <button id="submit" onclick=location.href="A1_login.html";>Log Out</button>
+	<button id="delete" onclick="deleteAccount()">Delete My Account</button>
+</div>
+<script>
+function deleteAccount() {
+    alert("Warning: Are you sure you want to delete the account!");
+    window.location.href="A1_login.html";
+	localStorage.removeItem("name");
+	localStorage.removeItem("password");
+}
+
+if(localStorage){
+var username=localStorage.getItem("username");
+var password=localStorage.getItem("password");
+document.getElementById("name").innerHTML=username;
+document.getElementById("password").innerHTML=password;
+}
+else{
+alert("Your browser not support localStorage");
+}
+</script>
+</body>
+
+<footer>
+	<p style="font-size:20px"><i class="fas fa-envelope"></i>   mixuemalaysia@gmail.com</p><br>
+    <p style="font-size:20px"><i class="fas fa-phone"></i>   +60 11 5411 7188 </p>
+	<div>
+    <img class="mixuelogo" src="Mixue_logo.png" alt="mixue_logo">
+    </div>
+</footer>
+</html>

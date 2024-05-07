@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<style>
+
+
+ul{
+ list-style-type:none; 
+ margin:0;
+ padding:0;
+}
+
+li{
+ display:inline-block;
+ float:left;
+}
+
+li a {
+  text-decoration: none;
+  display:inline-block;
+  padding:15px;
+  color:#35253a;
+}
+
+li a:hover:not(.active){
+ background-color: pink;
+}
+
+.active{
+  background-color: pink;
+}
+
+h1{
+font-size:60px;
+text-align:center;
+font-size:50px;
+padding:80px;
+}
+
+p{
+text-align:center;
+letter-spacing:3px;
+padding-bottom:10px;
+
+}
+form{
+text-align:center;
+}
+
+
+input[type=text] {
+    width:30%;
+    padding:12px;
+	border: 1px solid #ccc;
+	border-radius:20px;
+	box-sizzing:border-box;
+	margin-top:6px;
+	margin-bottom:16px;
+    
+}
+
+textarea {
+  width: 65%;
+  height:150px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 23px;
+  margin-top:6px;
+  margin-bottom:16px;
+  resize: none;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 15px;
+}
+
+.row{
+margin-top:50px;
+border:solid 1px black;
+
+}
+
+h3{
+text-align:center;
+}
+
+.submitButton{
+  background-color:#EC8094;
+  color:white;
+  padding:12px 18px;
+  border:none;
+  border-radius:6px;
+  margin:8px;
+  cursor:pointer;
+  display;inline-block;
+}
+
+.submitButton:hover{
+  opacity: 0.8;
+}
+
+footer {
+  clear: left;
+  text-align:left;
+  position:relative;
+  left:0;
+  bottom:0;
+  width:100%;
+  background-color: pink;
+  color: white;
+  padding-bottom:16px;
+}
+
+footer p{
+text-align:left;
+}
+
+.mixuelogo{
+  width:80px;
+  height:80px;
+  position:absolute;
+  bottom:0;
+  right:40px;
+}
+
+
+
+
+</style>
+</head>
+
+
+<body style="margin:0;">
+
+<ul>
+<li><a href="A1_homepage.html">Home</a></li> 
+<li><a href="A1_aboutUs.html">About Us</a></li>
+<li><a href="A1_menu.html">Menu</a></li>
+<li><a class="active" href="A1_contactUs.html">Contact Us</a></li>
+<li style="float:right"><a href="A1_cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+<li style="float:right"><a href="A1_profile.html"><i class="fas fa-user"></i></a></li>
+</ul>
+
+<br><h1>CONTACT US</h1>
+
+<p>we can't solve your problem if you don't tell us about it!</p>
+
+
+<form action="#" method="POST">
+ 
+    <input type="text" id="Name" name="Name" placeholder="Enter your Name">&nbsp;&nbsp;
+	
+    <input type="text" id="Email" name="Email" placeholder="Enter a Valid Email Address"><br>
+	<textarea name="messages" placeholder="Enter your Message"></textarea><br>
+	
+
+   <button class="submitButton" onclick="submitForm()">Submit</button>
+
+</form>
+<br><br><br>
+<div class="row">
+  <div class="column">
+    <h3>FIND US</h3>
+    <p>Operation Office:</p>
+	<p>No. 6, Jalan Roda 3, 81300 Skudai, Johor.</p>
+  </div>
+  
+  <div class="column">
+    <h3>HOUR</h3>
+    <p>Monday - Saturday : 11am-6pm</p>
+  </div>
+  
+  <div class="column">
+    <h3>CALL US</h3>
+    <p>+60 11 5411 7188</p>
+  </div>
+</div>
+
+<script>
+function submitForm(){
+alert("Thank you for contacting us!");
+}
+   
+</script>
+
+
+</body>
+<footer>
+	<p><i class="fas fa-envelope"></i>   mixuemalaysia@gmail.com</p>
+    <p><i class="fas fa-phone"></i>   +60 11 5411 7188 </p>
+
+	<div>
+    <img class="mixuelogo" src="Mixue_logo.png" alt="mixue_logo">
+    </div>
+</footer>
+
+</html>

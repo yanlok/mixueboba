@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <button class="cancel-button" onclick=location.href="A1_homepage.html";>Cancel</button>
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="style.css" />
+<style>
+
+body {
+    background-color: #F2F2F2;
+}
+
+.cancel-button{
+    background-color:#EC8094;
+	color:white;
+	padding: 12px 18px;
+	border:none;
+	border-radius:6px;
+	margin:8px;
+	cursor:pointer;
+	display:inline-block;
+}
+
+.cancel-button:hover{
+  opacity:0.8;
+}
+
+.container {
+    width: 80%;
+    margin: 70px auto 70px auto;
+	padding:30px;
+	text-align:center;
+	border:solid 1px #777;
+	border-radius:20px;
+	background-color:#FFF8F9;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="email"],
+.checkout-form select {
+    width: 88%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.checkout-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-form input[type="submit"]:hover {
+    background-color: #0062cc;
+}
+
+.checkout-form .form-group {
+    margin-bottom: 20px;
+}
+
+.checkout-form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+
+
+.order-summary {
+    margin-top: 40px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.order-summary h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.order-summary table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.order-summary table th,
+.order-summary table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.order-summary table th {
+    font-weight: bold;
+}
+
+.order-summary .total {
+    font-weight: bold;
+    text-align: right;
+}
+
+.order-summary .total span {
+    color: #007bff;
+}
+
+button {
+	background-color: #EC8094;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+		}
+		
+button:hover {
+  opacity: 0.8;
+}
+
+</style>	
+</head>
+  <body>
+    <div class="container">
+      <h1>Checkout Page</h1>
+      <form class="checkout-form">
+        <h2>Shipping Information</h2>
+        <div class="form-control">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required >
+        </div>
+        <div class="form-control">
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required >
+        </div>
+        <div class="form-control">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required >
+        </div>
+        <div class="form-control">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" required >
+        </div>
+        <div class="form-control">
+          <label for="zip">Zip/Postal Code</label>
+          <input type="text" id="zip" name="zip" required >
+        </div>
+<br><br><br>
+        <h2>Payment Information</h2>
+        <div class="form-control">
+          <label for="cardname">Name on Card</label>
+          <input type="text" id="cardname" name="cardname" required >
+        </div>
+        <div class="form-control">
+          <label for="cardnumber">Card Number</label>
+          <input type="text" id="cardnumber" name="cardnumber" required >
+        </div>
+        <div class="form-control">
+          <label for="expmonth">Expiration Month</label>
+          <input type="text" id="expmonth" name="expmonth" required >
+        </div>
+        <div class="form-control">
+          <label for="expyear">Expiration Year</label>
+          <input type="text" id="expyear" name="expyear" required >
+        </div>
+        <div class="form-control">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" required >
+        </div>
+        <button type="submit" onclick="placeOrder()">Place Order</button>
+      </form>
+    </div>
+	
+<script>
+	function placeOrder() {
+    alert("Thank you so much for your order!");
+    window.location.href="A1_homepage.html";
+}
+	
+	
+</script>
+	
+	
+	
+	
+ </body>
+</html>

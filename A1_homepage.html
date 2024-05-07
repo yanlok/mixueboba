@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<style>
+
+ul{
+ list-style-type:none; 
+ margin:0;
+ padding:0;
+ 
+}
+
+li{
+ display:inline-block;
+ float:left;
+}
+
+li a {
+  text-decoration: none;
+  display:inline-block;
+  padding:15px;
+  color:#35253a;
+}
+
+li a:hover:not(.active){
+ background-color: pink;
+}
+
+.active{
+  background-color: pink;
+}
+
+.outerbox{
+	position:relative;
+}
+.innerbox{
+	color:#35253a;
+	position:absolute;
+	bottom:40%;
+	left:40%;
+	text-align:center;
+}
+
+img{
+ width:100%;
+}
+
+.heading{
+ 
+ font-size:70px;
+
+}
+
+.product{
+margin-left:235px;
+
+}
+
+.product a{
+  background-color: #FADCE4;
+  border: solid 1px #FADCE4;
+  border-radius: 25px;
+  color: #35253a;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size: 16px;
+  margin: 10px;
+  padding:20px;
+  cursor: pointer;
+  width:20%;
+  height:20%;
+}
+
+.product a:hover{
+  background-color: khaki;
+  color: white;
+  text-align: center;
+}
+
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  flex:1;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 300px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.slogan{
+display:block;
+width: 30%;
+margin:auto;
+padding-top:25px;
+}
+
+.p-slogan{
+text-align:center;
+letter-spacing:3px;
+padding:25px;
+line-height: 1.5;
+}
+
+.BOD{
+text-align:center;
+color:red;
+font-size:50px;
+}
+
+footer {
+  clear:left;
+  text-align: left;
+  position:relative;
+  left:0;
+  bottom:0;
+  width:100%;
+  background-color: pink;
+  color: white;
+  padding-bottom:16px;
+}
+
+.mixuelogo{
+  width:80px;
+  height:80px;
+  position:absolute;
+  bottom:0;
+  right:40px;
+}
+
+
+
+</style>
+</head>
+<body style="margin:0;">
+
+<ul>
+<li><a class="active" href="A1_homepage.html">Home</a></li> 
+<li><a href="A1_aboutUs.html">About Us</a></li>
+<li><a href="A1_menu.html">Menu</a></li>
+<li><a href="A1_contactUs.html">Contact Us</a></li>
+<li style="float:right"><a href="A1_cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+<li style="float:right"><a href="A1_profile.html"><i class="fas fa-user"></i></a></li>
+</ul>
+
+<div class="outer box"">
+<img src="login.jpg">
+  <div class="innerbox">
+  <h2 class="heading">MIXUE</h2>
+  <p>SINCE 1997 . ICE CREAM & MILK TEA</p>
+  </div>
+</div>
+
+
+<h2 style="text-align:center; color:#35253a">Our Product</h2>
+
+<div  class="product">
+<a href="A1_menu.html">Ice Cream</a>
+<a href="A1_menu.html">Milk Tea</a>
+<a href="A1_menu.html">Fruit Tea</a>
+</div>
+
+<div style="display:flex">
+<div class="gallery">
+  <a target="_blank" href="iceCream1.jpg">
+    <img src="icecream.jpg" alt="Ice Cream" width="50px" height="50px">
+  </a>
+  <div class="desc">Enjoy a scoop of our delicious homemade vanilla ice cream, made with the freshest ingredients and perfect for a sweet treat any time of day</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="milkTea.jpg">
+    <img src="milkTea.jpg" alt="Milk Tea" width="50px" height="50px">
+  </a>
+  <div class="desc">Refreshing and satisfying tea with creamy milk and a choice of flavors</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="fruitTea.jpg">
+    <img src="fruitTea.jpg" alt="Fruit Tea" width="50px" height="50px">
+  </a>
+  <div class="desc">Healthy and flavorful tea infused with fresh fruits and served with ice</div>
+</div>
+</div>
+
+<div class="slogan">
+<img src="mixueSlogan.png">
+</div>
+<p class="p-slogan">Our founders love all Mixuers. Mixuers love each other. We love our customers and they return our love.
+ Customers lover each other and Mixue loves its customers!</p>
+<p class="p-slogan">The slogan I Love You is the most common expression that conveys everyone’s affection for each other.
+Concise and catchy, everyone will know that Mixue Ice Cream & Tea is a loving brand and enterprise!</p>
+
+<h2 class="BOD">Behind Our Drinks</h2>
+<img src="BehindOurDrink.svg">
+</body>
+
+<footer>
+	<p style="font-size:20px"><i class="fas fa-envelope"></i>   mixuemalaysia@gmail.com</p>
+    <p style="font-size:20px"><i class="fas fa-phone"></i>   +60 11 5411 7188 </p>
+	<div>
+    <img class="mixuelogo" src="Mixue_logo.png" alt="mixue_logo">
+    </div>
+</footer>
+
+</html>

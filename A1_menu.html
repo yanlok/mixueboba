@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<style>
+body{
+  padding-bottom: 50px;
+  margin:0;
+}
+
+nav#nav1 ul{
+  list-style-type:none; 
+  margin:0;
+  padding:0;
+}
+
+nav#nav1 li{
+  display:inline-block;
+  float:left;
+}
+
+nav#nav1 li a {
+  text-decoration: none;
+  display:inline-block;
+  padding:15px;
+  color:#35253a;
+}
+
+nav#nav1 li a:hover:not(.active){
+  background-color: pink;
+}
+
+nav#nav1 .active{
+  background-color: pink;
+}
+
+.innerbox{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size: 18px;
+  text-align:center;
+}
+.background{ 
+  width: 100%;
+  filter:blur(4px);
+}
+
+.menutitle{
+  margin:40px auto;
+  text-align:center;
+  max-width:1200px;
+  position:relative;
+}
+
+.menutitle::before{
+  content:"";
+  height:2px;
+  width:550px;
+  background:#000;
+  position:absolute;
+  left:0;
+  top:50%;
+  z-index:-2;
+  display:block;
+}
+
+.menutitle::after{
+  content:"";
+  height:2px;
+  width:550px;
+  background:#000;
+  position:absolute;
+  right:0;
+  top:50%;
+  z-index:-2;
+  display:block;
+}
+
+nav#nav2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: relative;
+  height: 100%;
+  float:left;
+}
+
+nav#nav2 li a {
+  display: block;
+  color:#35253a;
+  padding: 80px 16px;
+  text-decoration: none;
+  font-size:20px;
+}
+
+nav#nav2 li a.active {
+  background-color: pink;
+  color: white;
+}
+
+nav#nav2 li a:hover:not(.active) {
+  background-color: pink;
+  color: white;
+}
+
+.productList{
+ margin-left:25%;
+ margin-top: 50px;
+ padding:1px 16px;
+ height:1000px;
+
+}
+
+div.product {
+
+  margin: 5px;
+  float: left;
+  width: 180px;
+  flex:1;
+}
+
+div.product:hover {
+  border: 1px solid #292929;
+}
+
+div.product img {
+  width: 100%;
+  height: auto;
+}
+
+div.shop-item-title {
+  padding: 15px;
+  text-align: center;
+}
+ div.shop-item-details{
+ text-align:center;
+ }
+ 
+ .shop-item-button{
+ background-color: pink;
+ color: white;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ }
+ 
+ .shop-item-button:hover {
+  opacity: 0.8;
+}
+
+footer {
+  background-color: pink;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top:1650px;
+  float:left;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p{
+text-align:left;
+}
+
+.mixuelogo{
+  width:80px;
+  height:80px;
+  position:absolute;
+  bottom:0;
+  right: 40px;
+}
+
+</style>
+</head>
+<body>
+
+<nav id="nav1">
+<ul>
+<li><a href="A1_homepage.html">Home</a></li>
+<li><a href="A1_aboutUs.html">About Us</a></li>
+<li><a class="active" href="A1_menu.html">Menu</a></li>
+<li><a href="A1_contactUs.html">Contact Us</a></li>
+<li style="float:right"><a href="A1_cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+<li style="float:right"><a href="A1_profile.html"><i class="fas fa-user"></i></a></li>
+</ul>
+</nav>
+
+<div class="outerbox">
+<img class="background" src="mixue_menu.png" >
+  <div class="innerbox">
+  <h2 style="font-size:60px; color:white">OUR PRODUCTS</h2>
+  <p style="color:white;">SINCE 1997 . ICE CREAM & MILK TEA</p>
+  </div>
+</div>
+
+<h2 class="menutitle">Menu</h2>
+
+<nav id="nav2">
+<ul>
+  <li><a class="active" href="#iceCream">Fresh Ice Cream & Tea</a></li>
+  <li><a href="#milkTea">Milk Tea</a></li>
+  <li><a href="#fruitTea">Real Fruit Tea</a></li>
+</ul>
+</nav>
+
+
+<div class="productList">
+<h2 id="iceCream">Fresh Ice Cream & Tea</h2>
+<div style="display:flex">
+    <div class="product">
+       <a target="_blank" href="bobaSundae.jpg">
+        <img class="shop-item-image" src="bobaSundae.jpg" alt="Boba Sundae" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title" id="prod1">Boba Sundae</div>
+		     <div class="shop-item-details">
+		     <span class="shop-item-price" id="price1">RM5</span>
+             <button class="shop-item-button" type="button" onclick="addToCart('Boba Sundae','5')">ADD TO CART</button>
+			 </div>
+     </div>
+
+     <div class="product">
+       <a target="_blank" href="icecream2.jpg">
+        <img class="shop-item-image" src="icecream2.jpg" alt="Strawberry Mi Shake" width="50px" height="50px">
+         </a>
+          <div class="shop-item-title">Strawberry Mi Shake</div>
+		  <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button" onclick="addToCart('Strawberry Mi Shake','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+     <div class="product">
+       <a target="_blank" href="icecream3.jpg">
+        <img class="shop-item-image" src="icecream3.jpg" alt="Blueberry Mi Shake" width="50px" height="50px">
+         </a>
+          <div class="shop-item-title">Blueberry Mi Shake</div>
+		  <div class="shop-item-details">
+		     <span class="shop-item-price">RM7</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Blueberry Mi Shake','7')">ADD TO CART</button>
+			 </div>
+     </div>
+</div>
+<br>
+<div style="display:flex">
+    
+     <div class="product">
+       <a target="_blank" href="icecream4.jpg">
+        <img class="shop-item-image" src="icecream4.jpg" alt="Oreo Sundae" width="50px" height="50px">
+         </a>
+          <div class="shop-item-title">Oreo Sundae</div>
+		  <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Oreo Sundae','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+     <div class="product">
+       <a target="_blank" href="icecream5.jpg">
+        <img class="shop-item-image" src="icecream5.jpg" alt="Strawberry Sundae" width="50px" height="50px">
+         </a>
+          <div class="shop-item-title">Strawberry Sundae</div>
+		  <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Strawberry Sundae','6')">ADD TO CART</button>
+			 </div>
+     </div>
+	 
+	 <div class="product">
+       <a target="_blank" href="icecream1.jpg">
+        <img class="shop-item-image" src="icecream1.jpg" alt="Signature King Cone" width="50px" height="50px">
+         </a>
+          <div class="shop-item-title">Signature King Cone</div>
+		  <div class="shop-item-details">
+		     <span class="shop-item-price">RM2</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Signature King Cone','2')">ADD TO CART</button>
+			 </div>
+     </div>
+	 
+</div>
+<br>
+<h2 id="milkTea">Milk Tea</h2>
+<div style="display:flex">
+    <div class="product">
+       <a target="_blank" href="milktea1.jpg">
+        <img class="shop-item-image" src="milktea1.jpg" alt="Brown Sugar Pearl Milk Tea" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title">Brown Sugar Pearl Milk Tea</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Brown Sugar Pearl Milk Tea','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+     <div class="product">
+       <a target="_blank" href="milktea2.jpg">
+        <img class="shop-item-image" src="milktea2.jpg" alt="Supreme Milk Tea" width="50px" height="50px">
+         </a>
+          <div class="shop-item-title">Supreme Milk Tea</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Supreme Milk Tea','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+     <div class="product">
+       <a target="_blank" href="milktea3.jpg">
+        <img class="shop-item-image" src="milktea3.jpg" alt="Pearl Milk Tea" width="50px" height="50px">
+         </a>
+          <div class="shop-item-title">Pearl Milk Tea</div>
+		  <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Pearl Milk Tea','6')">ADD TO CART</button>
+			 </div>
+     </div>
+</div>
+<br>
+<h2 id="fruitTea">Real Fruit Tea</h2>
+<div style="display:flex">
+    <div class="product">
+       <a target="_blank" href="fruittea1.jpg">
+        <img class="shop-item-image" src="fruittea1.jpg" alt="Peach Oolong Tea" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title">Peach Oolong Tea</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Peach Oolong Tea','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+     <div class="product">
+       <a target="_blank" href="fruittea2.jpg">
+        <img class="shop-item-image" src="fruittea2.jpg" alt="Passion Fruit Jasmine Tea" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title">Passion Fruit Jasmine Tea</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Passion Fruit Jasmine Tea','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+      <div class="product">
+       <a target="_blank" href="fruittea3.jpg">
+        <img class="shop-item-image" src="fruittea3.jpg" alt="Fresh Squeezed Lemonade" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title">Fresh Squeezed Lemonade</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM3</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Fresh Squeezed Lemonade','3')">ADD TO CART</button>
+			 </div>
+     </div>
+</div>
+<br>
+<div style="display:flex">
+    <div class="product">
+       <a target="_blank" href="fruittea4.jpg">
+        <img class="shop-item-image" src="fruittea4.jpg" alt="Creamy Mango Boba" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title">Creamy Mango Boba</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button"onclick="addToCart('Creamy Mango Boba','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+     <div class="product">
+       <a target="_blank" href="fruittea5.jpg">
+        <img class="shop-item-image" src="fruittea5.jpg" alt="Peach Earl Grey Tea" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title">Peach Earl Grey Tea</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button" onclick="addToCart('Peach Earl Grey Tea','6')">ADD TO CART</button>
+			 </div>
+     </div>
+
+      <div class="product">
+       <a target="_blank" href="fruittea6.webp">
+        <img class="shop-item-image" src="fruittea6.webp" alt="Hawaiian Fruit Tea" width="50px" height="50px">
+         </a>
+           <div class="shop-item-title">Hawaiian Fruit Tea</div>
+		   <div class="shop-item-details">
+		     <span class="shop-item-price">RM6</span>
+             <button class="shop-item-button" type="button" onclick="addToCart('Hawaiian Fruit Tea','6')">ADD TO CART</button>
+			 </div>
+     </div>
+</div>
+
+</div>
+
+<script>
+
+
+  function addToCart(prd,prc){
+   
+    var price = parseInt(prc);
+    var title = prd;
+    var cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+    
+   cartItems.push({title:title, price:price});
+   sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+   
+   window.location.href = "A1_cart.html";
+  }
+  
+</script>
+</body>
+<footer>
+	<p style="font-size:20px"><i class="fas fa-envelope"></i>   mixuemalaysia@gmail.com</p>
+    <p style="font-size:20px"><i class="fas fa-phone"></i>   +60 11 5411 7188 </p>
+	<div>
+    <img class="mixuelogo" src="Mixue_logo.png" alt="mixue_logo">
+    </div>
+</footer>
+</html>

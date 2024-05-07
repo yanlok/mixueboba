@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<script src="A1_cart.js" async></script>
+<button class="back-button" onclick=location.href="A1_menu.html";>Back</button>
+
+<style>
+.back-button {
+    background-color:#EC8094;
+	color:white;
+	padding: 12px 18px;
+	border:none;
+	border-radius:6px;
+	margin:8px;
+	cursor:pointer;
+	display:inline-block;
+}
+
+.back-button:hover{
+  opacity:0.8;
+}
+.section-header{
+text-align:center;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.remove {
+    color: white;
+    background-color: pink;
+    border: none;
+	padding:10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.remove:hover {
+    opacity:0.8;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #F7F1EC;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+ background-color: #F7CE74;
+ color: white;
+ display: block;
+ padding: 14px 20px;
+ margin: 40px auto 80px auto;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+ .btn-purchase:hover {
+  opacity: 0.8;
+}
+</style>
+</head>
+<body>
+ <section class="container content-section">
+    <h2 class="section-header">MY CART</h2>
+    <div class="cart-row" id="cart-row">
+      <span class="cart-item cart-header cart-column">ITEM</span>
+      <span class="cart-price cart-header cart-column">PRICE</span>
+      <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-total">
+      <strong class="cart-total-title">Total</strong>
+      <span class="cart-total-price" id="cart-total-price">RM 0</span>
+    </div>
+    <button class="btn-purchase" type="button" onclick="purchaseClicked()">PURCHASE</button>
+  </section>
+
+</body>
+</html>

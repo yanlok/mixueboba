@@ -7,7 +7,7 @@
 	   
 		h1{
 		    text-align: center;
-		    background-image: url("Mixue_logo.png");
+		    background-image: url("imageSrc/Mixue_logo.png");
 			background-repeat: no-repeat;
 			background-size:5%;
 			background-position:bottom;
@@ -45,7 +45,7 @@
 		}
 		
 		input[type=password]{
-		background-image: url("password_icon.png");
+		background-image: url("imageSrc/password_icon.png");
 		background-size:2%;
 		background-position:600px 10px;
 		padding-right:50px;
@@ -70,7 +70,7 @@
 <body style="margin:0;">
 	<h1>Welcome to Mixue</h1>
 	
-	<form action="A1_homepage.html" method="POST" onsubmit="setData()">
+	<form action="index.html" method="POST" onsubmit="setData()">
 		<label for="username">Username</label>
 		<input type="text" id="username" name="username" placeholder="Enter your username">
 
@@ -85,7 +85,7 @@
 <script>
 function signUp() {
     alert("You have been signed up!");
-    window.location.href="A1_homepage.html";
+    window.location.href="index.html";
 }
 
 function setData(){
